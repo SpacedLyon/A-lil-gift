@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+body{
+	margin: 0;
+	padding: 0;
+	background: black;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.Achtergrond {
+	position: fixed;
+	height: 100vh;
+	width: 100%;
+	background-repeat: no-repeat;
+}
+
+.AchtergrondHelper {
+	background-image: linear-gradient(to bottom, transparent 70%, black);
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 100vh;
+	width: 100%;
+	filter: blur(10px);
+}
+
+svg{
+	position: fixed;
+	top: 80px;
+	left: 50%;
+	width: 250px;
+	height: 46.7px;
+	transform: translate(-50%, -50%);
+	transition: 0.2s;
+	animation: Lijntjes 1s;
+	stroke: #fff;
+	fill: #fff;
+	stroke-dasharray: 1800;
+	opacity: 1;
+	z-index: 3;
+	animation-fill-mode: forwards;
+	animation-delay: 3s;
+}
+
+path {
+	stroke: #fff;
+	fill: #fff;
+	stroke-dasharray: 1800;
+	opacity: 1;
+	grid-column: 3/5;
+	animation: WoopWoopTekst 4s cubic-bezier(0,0.23,1,.1);;
+}
+
+
+
+@keyframes WoopWoopTekst {
+	0% {
+		position: absolute;
+		top: 80px;
+		left: 50%;
+		visibility: visible;
+		opacity: 0;
+		fill: none;
+		stroke-dashoffset: 1800; 
+		height: 179px;
+		width: 1158px;
+	}
+
+	20% {
+		opacity: 0.2;
+		stroke-dashoffset: 1800; 
+	}
+
+	70% {
+		opacity: 0.5;
+		fill: rgba(255,255,255,0);
+		stroke-dashoffset: 0;
+	}
+
+	100% {
+		opacity: 1;
+		fill: rgba(255,255,255,1);
+	}
+}
+
+@keyframes Lijntjes {
+	0% {
+		height: 46.7px;
+		width: 250px;
+	}
+
+	50% {
+		height: 75px;
+		width: 401.25px;
+	}
+
+	100% {
+		width: 250px;
+		height: 46.7px;
+	}
+}
+
+.GoBack{
+	height: 50px;
+	width: 200px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	color: white;
+	margin-top: 20px;
+	margin-left: 20px;
+	transition:0.4s;
+	z-index: 4;
+}
+
+.GoBack a{
+	color: white;
+	transition:0.2s;
+	text-decoration: none;
+}
+
+.GoBack a:hover{
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.FirstBody {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	height: 500px;
+	width: 600px;
+	animation: Wooosh1 1.5s;
+	animation-delay: 1s;
+	opacity: 0;
+	animation-fill-mode: forwards;
+}
+
+.FirstBody h3 {
+	color: white;
+	font-family: Georgia, serif;
+	letter-spacing: 2px;
+	font-weight: 900;
+}
+
+.FirstBody h1 {
+	color: white;
+	font-family: Georgia, serif;
+	letter-spacing: 2px;
+	font-weight: normal;
+}
+
+.FirstBody strong {
+	font-weight: 900;
+}
+
+.FirstBody p {
+	color: white;
+	font-family: Georgia, serif;
+	letter-spacing: 2px;
+	font-weight: normal;
+	position: relative;
+	top: 0px;
+}
+
+.FirstBody button{
+	margin-top: 30px;
+	background: white;
+	height: 45px;
+	width: 175px;
+	border-radius: 22px;
+	border: 0;
+	box-shadow: 5px 5px 5px black;
+	transition: 0.2s;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 900;
+	outline: none;
+}
+
+.FirstBody button:hover{
+	cursor: pointer;
+	margin-top: 25px;
+	height: 55px;
+	width: 200px;
+	border-radius: 27px;
+	font-size: 17px;
+}
+
+@keyframes Wooosh1 {
+	0% {
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	}
+
+	100% {
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 1;
+	}
+}
+
+
+.SecondBody {
+	display: flex;
+	position: absolute;
+	top: 1350px;
+	height: 3500px;
+	width: 100%;
+}
+
+.Part1{
+	position: absolute;
+	top: 0px;
+	left: 5%;
+	height: 1000px;
+	width: 45%;
+	transition: 0.5s;
+}
+
+.Part1:hover{
+	transform: scale(1.1);
+	z-index: 3;
+	cursor: pointer;
+}
+
+.LeBackground1{
+	background-image: url(../img/Vancouver.jpg);
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 45px;
+	border: 3px solid black;
+}
+
+.Part1 h1, p {
+	position: relative;
+	bottom: 130px;
+	left: 5%;
+	z-index: 3;
+	color: white;
+	max-width: 90%;
+}
+
+.Part1 p {
+	bottom: 150px;
+}
+
+.Part2{
+	position: absolute;
+	top: 500px;
+	right: 5%;
+	height: 1000px;
+	width: 45%;
+	transition: 0.5s;
+}
+
+.Part2:hover{
+	transform: scale(1.1);
+	z-index: 3;
+	cursor: pointer;
+}
+
+.LeBackground2{
+	background-image: url(../img/Dubai.jpg);
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 45px;
+	border: 3px solid black;
+}
+
+.Part2 h1, p {
+	position: relative;
+	bottom: 130px;
+	left: 5%;
+	z-index: 3;
+	color: white;
+	max-width: 90%;
+}
+
+.Part2 p {
+	bottom: 150px;
+}
+
+.Part3{
+	position: absolute;
+	top: 1000px;
+	left: 5%;
+	height: 1000px;
+	width: 45%;
+	transition: 0.5s;
+}
+
+.Part3:hover{
+	transform: scale(1.1);
+	z-index: 3;
+	cursor: pointer;
+}
+
+.LeBackground3{
+	background-image: url(../img/Venice.jpg);
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 45px;
+	border: 3px solid black;
+}
+
+.Part3 h1, p {
+	position: relative;
+	bottom: 130px;
+	left: 5%;
+	z-index: 2;
+	color: white;
+	max-width: 90%;
+}
+
+.Part3 p {
+	bottom: 150px;
+}
+
+.Part4{
+	position: absolute;
+	top: 1500px;
+	right: 5%;
+	height: 1000px;
+	width: 45%;
+	transition: 0.5s;
+}
+
+.Part4:hover{
+	transform: scale(1.1);
+	z-index: 3;
+	cursor: pointer;
+}
+
+.LeBackground4{
+	background-image: url(../img/NewYork.jpg);
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 45px;
+	border: 3px solid black;
+}
+
+.Part4 h1, p {
+	position: relative;
+	bottom: 130px;
+	left: 5%;
+	z-index: 2;
+	color: white;
+	max-width: 90%;
+}
+
+.Part4 p {
+	bottom: 150px;
+}
+
+.Part5{
+	position: absolute;
+	top: 2000px;
+	left: 5%;
+	height: 1000px;
+	width: 45%;
+	transition: 0.5s;
+}
+
+.Part5:hover{
+	transform: scale(1.1);
+	z-index: 3;
+	cursor: pointer;
+}
+
+.LeBackground5{
+	background-image: url(../img/TheOldWildWest.jpg);
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 45px;
+	border: 3px solid black;
+}
+
+.Part5 h1, p {
+	position: relative;
+	bottom: 130px;
+	left: 5%;
+	z-index: 2;
+	color: white;
+	max-width: 90%;
+}
+
+.Part5 p {
+	bottom: 150px;
+}
+
+.Part6{
+	position: absolute;
+	top: 2500px;
+	right: 5%;
+	height: 1000px;
+	width: 45%;
+	transition: 0.5s;
+}
+
+.Part6:hover{
+	transform: scale(1.1);
+	z-index: 3;
+	cursor: pointer;
+}
+
+.LeBackground6{
+	background-image: url(../img/Japan.jpg);
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 45px;
+	border: 3px solid black;
+}
+
+.Part6 h1, p {
+	position: relative;
+	bottom: 130px;
+	left: 5%;
+	z-index: 3;
+	color: white;
+	max-width: 90%;
+}
+
+.Part6 p {
+	bottom: 150px;
+}
+
+@media only screen and (min-width: 2000px){
+	.Part1{
+		height: 1500px;
+	}
+
+	.Part2{
+		height: 1500px;
+		top: 750px;
+	}
+
+	.Part3{
+		height: 1500px;
+		top: 1500px;
+	}
+
+	.Part4{
+		height: 1500px;
+		top: 2250px;
+	}
+
+	.Part5{
+		height: 1500px;
+		top: 3000px;
+	}
+
+	.Part6{
+		height: 1500px;
+		top: 3750px;
+	}
+}
